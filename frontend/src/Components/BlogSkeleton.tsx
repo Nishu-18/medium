@@ -1,4 +1,4 @@
-import { Avatar } from "./Avatar";
+
 
 export function BlogSkeleton(){
     return <div>

@@ -14,9 +14,10 @@ export interface Blog{
             }
 
 }
+
 export function useBlog({id}:{id:string}){
     const [loading,setLoading]=useState(true)
-    const [blog,setBlog]=useState<Blog[]>([])
+    const [blog,setBlog]=useState<Blog>()
     useEffect(()=>{
          async function getBlogs(){
             const response=await axios.get(`https://backend.nishchalbhardwaj2004.workers.dev/api/v1/post/${id}`,{headers:{Authorization:localStorage.getItem("token")}})
@@ -41,7 +42,7 @@ export function useBlog({id}:{id:string}){
 
 export function useBlogs(){
     const [loading,setLoading]=useState(true)
-    const [blogs,setBlogs]=useState<Blog[]>([])
+    const [blogs,setBlogs]=useState<Blog[]>()
     useEffect(()=>{
          async function getBlogs(){
             const response=await axios.get("https://backend.nishchalbhardwaj2004.workers.dev/api/v1/post/bulk",{headers:{Authorization:localStorage.getItem("token")}})

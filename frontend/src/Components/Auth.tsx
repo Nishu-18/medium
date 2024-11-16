@@ -1,9 +1,8 @@
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import {  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { InputField } from "./InputField";
 import { SignUpBody } from "@nishchal_bhardwaj/medium";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 
 
 export function Auth({type}:{
